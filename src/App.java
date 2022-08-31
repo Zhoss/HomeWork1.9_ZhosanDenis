@@ -8,7 +8,8 @@ public class App {
         System.out.println();
         Author andrzejSapkowski = new Author("Анджей", "Сапковский");
         Book witcher = new Book("Кровь эльфов", andrzejSapkowski, 1994);
-        System.out.println("witcher = " + witcher.getBookName() + " " + andrzejSapkowski.getAuthorName() + " " + andrzejSapkowski.getAuthorLastName() + " " + witcher.getPublicationYear());
+        System.out.println("witcher = " + witcher.getBookName() + " " + witcher.getAuthorFullName().getAuthorName() + " " + witcher.getAuthorFullName().getAuthorLastName() + " " + witcher.getPublicationYear());
+        System.out.println("witcher = " + witcher.getBookName() + " " + witcher.authorFullName(witcher.getAuthorFullName()) + " " + witcher.getPublicationYear());
         witcher.setPublicationYear(1995);
         System.out.println("Другой год публикации - " + witcher.getPublicationYear());
     }

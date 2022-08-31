@@ -25,4 +25,10 @@ public class Book {
         this.publicationYear = publicationYear;
     }
 
+    public String authorFullName(Author author1) {
+        String authorName = author1.getAuthorName();
+        String authorLastName = author1.getAuthorLastName();
+        return authorName + " " + authorLastName;
+    }
+
 }
